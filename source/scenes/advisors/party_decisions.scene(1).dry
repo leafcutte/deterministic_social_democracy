@@ -1,0 +1,17 @@
+title: Party Decisions
+is-pinned-card: true
+tags: advisor
+card-image: img/Reichstagsfraktion_der_SPD.jpg
+on-arrival: last_party_action = 1
+new-page: true 
+
+= Party Decisions
+
+Rather than relying on random cards, we can instead choose directly which actions we want to take.
+
+- #party_affairs
+- @back: Return to main
+
+@back
+on-arrival: last_party_action = 0
+go-to: root
