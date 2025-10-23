@@ -1,5 +1,5 @@
 title: Cancel action.
-view-if: last_advisor_action = 1 or last_cabinet_action = 1
+view-if: last_advisor_action = 1 or last_cabinet_action = 1 or last_party_action = 1
 go-to: root
 on-arrival: {!
 if (Q.month_actions > 0) {
@@ -12,6 +12,9 @@ if (Q.last_advisor_action) {
 
 if (Q.last_cabinet_action) {
     Q.last_cabinet_action = 0;
+}
+if (Q.last_party_action) {
+    last_party_action = 0
 }
 // reset the timer...
 var card = this.game.scenes[this.state.prevTopSceneId];
